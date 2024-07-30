@@ -1,0 +1,120 @@
+@import "../../../css-config/mixins.scss";
+
+.newsletter-section{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../../../assets//newsletter-bg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .newsletter-content{
+
+        .title{
+           font-size: 1.5rem;
+           color: rgb(161, 149, 149);
+        }
+
+        .sub-title{
+           font-size: 1.5em;   
+           padding: 1rem 0;
+           font-weight: 600;
+        }
+        @include sm{
+            .sub-title{
+                font-size: 2rem;   
+                padding: 1rem 0;
+                font-weight: 400;
+             }
+        }
+
+        .form{
+            width: 100%;
+            margin: 0 auto;
+            border: 1px solid black;
+            input{
+                width: 70%;
+                padding: 1rem 2rem;
+                border: 1px solid black;
+                font-size: 1rem;
+                // outline: 0;
+            }
+
+            button{
+                width: 30%;
+                padding: 1rem 1rem;
+                background-color: #04AA6D;
+                font-weight: 600;
+                font-size: 1rem;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+       @include sm{
+        .form{
+            width: 70%;
+            margin: 0 auto;
+            border: 1px solid black;
+            // background-color: red;
+            input{
+                width: 70%;
+                // padding: 1rem 2rem;
+            }
+
+            button{
+                width: 30%;
+                // padding: 1rem 1rem;
+            }
+        }
+       }
+
+
+
+        .text{
+            font-weight: 400;
+            padding: 1rem 0;
+        }
+
+        .social-icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            .icon{
+                width: 30px;
+                height: 30px;
+                background-color: rgba(0, 0, 0, 0.8);
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                display: flex;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 45px;
+
+        
+
+
+        @include sm{
+            
+        }
+
+
+    }
+
+}

@@ -1,0 +1,37 @@
+@import "../../../css-config/mixins.scss";
+
+
+.category-section{
+
+    margin: 20px 0;
+    @include md {
+        margin: 50px 0;
+    }
+
+    .category-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        .category{
+            background-color: black;
+            width: calc(50% - 5px);
+            @include md {
+                width: calc(25% - 10px);
+                // width: 250px;
+            }
+            overflow: hidden;
+            cursor: pointer;
+            img {
+                width: 100%;
+                display: block;
+
+                &:hover {
+                    transform: scale(1.2);
+                    transition: all ease 0.5s;
+                }
+            }
+
+        }
+    }
+}

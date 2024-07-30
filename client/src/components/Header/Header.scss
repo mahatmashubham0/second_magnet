@@ -1,0 +1,85 @@
+@import "../../css-config/mixins.scss";
+
+.main-header {
+   background-color: black;
+   color: white;
+   padding: 0 40px;
+   @include sm {
+    padding: 0 20px;
+   }
+
+     .header-content {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       height: 60px;
+       max-width: 1200px;
+       margin: 0 auto;
+
+       .header-left{
+         list-style-type: none;
+        text-transform: uppercase;
+        display: none;
+        @include sm {
+            display: flex;
+        }
+         ul{
+            display: flex;
+            gap: 1rem;
+            font-weight: 300;
+            li{
+                list-style-type: none;
+                cursor: pointer;
+            }
+         }
+       }
+       .header-center{
+         font-size: 25px;
+         font-weight: 600;
+         transform: translatex(-20px);
+         cursor: pointer;
+       }
+       .header-right{
+         display: flex;
+         cursor: pointer;
+         align-items: center;
+         gap: 1.5rem;
+         font-size: 1.5rem;
+         span{
+            align-items: center;
+            display: flex;
+         }
+         .cart-icon{
+            position: relative;
+            span{
+                min-width: 20px;
+                align-items: center;
+                background-color: #04AA6D;
+                padding: 2.5px;
+                display: flex;
+                padding-top: 1px;
+                justify-content: center;
+                border-radius: 100%;
+                position: absolute;
+                top: -5px;
+                right: -12px;
+                font-size: 12px;
+                line-height: 1;
+            }
+         }
+       }
+     }
+}
+
+
+.header-sticky
+ {
+   position: sticky;
+   top: 0;
+   animation: stickyHeader ease forwards  0.3s;
+}
+
+@keyframes stickyHeader {
+    0% {transform: translateY(-80px);}
+    100% {transform: translateY(0px);}
+}
