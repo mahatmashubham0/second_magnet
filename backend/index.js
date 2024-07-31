@@ -24,12 +24,13 @@ app.use(
 );
 
 
+app.use(bodyParser.raw({ type: 'application/json' }));
 app.use('/', orderRoute)
 
 
 
 const ports = process.env.PORT || 3301;  
-// Server is on
+// // Server is on
 app.listen(port, () => {
   console.log('Server is running on port',port);
 });
